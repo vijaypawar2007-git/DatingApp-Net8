@@ -12,7 +12,7 @@ public class TokenService(IConfiguration config) : ITokenService
 {
     public string CreateToken(AppUser user)
     {
-        var tokenKey = config["TokenKey"] ?? throw new Exception("Cannot access tokenKey from appsettings");;
+        var tokenKey = config["TokenKey"] ?? throw new Exception("Cannot access tokenKey from appsettings");
         if (tokenKey.Length < 64)
             throw new Exception("Your tokenKey need to be longer");
 
