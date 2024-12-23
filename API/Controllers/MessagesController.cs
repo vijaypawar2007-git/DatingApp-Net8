@@ -62,7 +62,7 @@ public class MessagesController(IMessageRepository messageRepository, IUserRepos
     {
         var currentUsername = User.GetUsername();
 
-        return Ok(await messageRepository.GetMessagesThread(currentUsername, username));
+        return Ok(await messageRepository.GetMessageThread(currentUsername, username));
     }
 
     [HttpDelete("{id}")]
